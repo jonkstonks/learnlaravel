@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel - Contact Us</title>
-</head>
-<body>
+<x-layout title="Contact Us">
     <h1>Contact Us</h1>
 
     <div>
-        <ul>
-            <li>We are located at 123 Main Street.</li>
-            <li>Our office hours are Monday-Friday, 9am-5pm.</li>
-            <li>We are closed on weekends and holidays.</li>
-        </ul>
-        <p>Email: JeffreyCoolguyFromLaracast@laracast.com</p>
-        <p>Phone: 555-555-5555</p>
+        <p>
+            We are located at 123 Main Street.</br>
+            Our office hours are Monday-Friday, 9am-5pm.</br>
+            We are closed on weekends and holidays.
+        </p>
     </div>
 
-    <div>
-        <a href="/">Return Home</a>
-    </div>
-</body>
-</html>
+    <x-card class="max-w-400">
+        <p>Placeholder for the contact form.</p>
+    </x-card>
+</x-layout>
