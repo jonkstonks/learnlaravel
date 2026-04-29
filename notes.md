@@ -4,3 +4,4 @@
 4. episood - Layout file lisamine | uute komponentide lisamiseks uus fail views/components kausta | atribuutide ja prop'ide eristamine
 5. episood - View andmete muutmine | `'person' => request('person', 'vana kere'),` ~ /?person=KuiSiinNimePole, siis default on _vana kere_
 6. episood - `@dump($tasks)` dump - dumpib array ega mõjuta ülejäänud koodi, `@dd($tasks)` dump&die - dumpib array ning peatab programmi töö | `@if` `@unless` `empty` ja muu selgitus
+7. episood - Forms | tailwind css | POST request | CSRF (Cross-Site Request Forgery) kaitse: formis ees `@csrf` | sessioonis ideede hoidmine 
