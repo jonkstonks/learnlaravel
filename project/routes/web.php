@@ -1,58 +1,38 @@
 <?php
 
+use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\CatController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Idea;
+use App\Models\Cat;
+use App\Common\Helpers;
+
+// Ideas
+Route::get('/ideas', [IdeaController::class, 'index']);
+Route::get('/ideas/create', [IdeaController::class, 'create']);
+Route::post('/ideas', [IdeaController::class, 'store']);
+Route::get('/ideas/{idea}', [IdeaController::class, 'show']);
+Route::get('/ideas/{idea}/edit', [IdeaController::class, 'edit']);
+Route::patch('/ideas/{idea}/', [IdeaController::class, 'update']);
+Route::delete('/ideas/{idea}', [IdeaController::class, 'destroy']);
+
+// Cats
+Route::get('/cats', [CatController::class, 'index']);
+Route::get('/cats/random', [CatController::class, 'random']);
+
+/* -- siin proovisin ilma controllerita kasse kätte saada --
 
 // index
-Route::get('/ideas', function () {
-    $ideas = Idea::all();
-
-    return view('ideas.index', [
-        'ideas' => $ideas,
-    ]);
+Route::get('/cats', function () {
+    return view('cats.index');
 });
 
 // show
-Route::get('/ideas/{idea}', function (Idea $idea) { // <-- Route & Model binding
-    // $idea = Idea::findOrFail($id); 
-    return view('ideas.show', [
-        'idea' => $idea,
-    ]);
+Route::get('/cats/random', function () {
+    // $cat = Cat::inRandomOrder()->first(); // <-- ilma helperita
+    $cat = Helpers::getRandom(Cat::class);
+
+    return view('cats.show', compact('cat'));
 });
 
-// edit
-Route::get('/ideas/{idea}/edit', function (Idea $idea) {
-    return view('ideas.edit', [
-        'idea' => $idea,
-    ]);
-});
-
-// update
-Route::patch('/ideas/{idea}/', function (Idea $idea) {
-    $idea->update([
-        'description' => request('description'),
-    ]);
-
-    return redirect("/ideas/{$idea->id}");
-});
-
-// store
-Route::post('/ideas', function () {
-    Idea::create([
-        'description' => request('description'),
-        // videos pani siia 'status' => 'pending', aga ma panin selle migratsioonis juba peale
-        // Eloquent lisab ise timestampid ka (pole kohaliku aja järgi tho, 4h taga praegu)
-    ]);
-
-    return redirect('/ideas');
-});
-
-// destroy
-Route::delete('/ideas/{idea}', function (Idea $idea) {
-    $idea->delete();
-
-    return redirect('/ideas');
-});
-
-
-// {{ person }} jaoks voiks lasta sisestada nime ja siis seda sessioonis hoida iguess
+*/
