@@ -1,8 +1,8 @@
 <x-layout title="Ideas">
-    <label for="idea" class="block text-xl font-bold text-black">Your Idea</label>
+    <label for="idea" class="mt-8 block text-xl font-bold text-black">Your Idea</label>
 
     <div class="mt-4">
-        {{ $idea->description }}
+        {{ $idea->description }} | {{ $idea->status}}
     </div>
 
     <div class="mt-6">
