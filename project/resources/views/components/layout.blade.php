@@ -15,9 +15,16 @@
 <body class="bg-neutral-100 p-6 max-w-xl mx-auto text-black">
     <nav class="bg-neutral-primary fixed w-full z-20 top-0 inset-s-0 border-b border-default">
         <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="/cats" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">mhmh</span>
-            </a>
+            @if ($title == 'Ideas')
+                <a href="/ideas" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="self-center text-xl text-heading uppercase font-semibold whitespace-nowrap">{{ $title }}</span>
+                </a>
+            @else
+                <a href="/cats" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="self-center text-xl text-heading uppercase font-semibold whitespace-nowrap">{{ $title }}</span>
+                </a>
+            @endif
+
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
                 <li>

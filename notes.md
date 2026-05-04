@@ -20,3 +20,5 @@ Migratsioonile panna kirjeldav nimi, nt: _add_status_to_ideas_table_
 **9. episood** - views/ideas.blade.php -> views/ideas/index.blade.php | actions: index, create, store, show, edit, UPDATE, delete |kirjete muutmine ja kustutamine | method spoofing
 
 **10. episood** - Controllers | `php artisan make:controller` - ideede jaoks sobis Resource tüüp, sai valida vastava Modeli (Idea) | kulutasin liiga palju aega kassipildi generaatori peale
+
+**11. episood** - Kasutaja sisendi valideerimine error komponendiga

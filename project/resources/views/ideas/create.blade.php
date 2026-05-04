@@ -7,6 +7,8 @@
             <p class="mt-1 text-sm/6 text-neutral-700 mb-1.5">Write it down and save it.</p>
             <div class="mt-2">
                 <textarea id="description" name="description" rows="3" class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-neutral-700 outline-1 -outline-offset-1 outline-black/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-pink-300 sm:text-sm/6"></textarea>
+            
+            <x-forms.error name="description" />
             </div>
         </div>
 
