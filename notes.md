@@ -22,3 +22,5 @@ Migratsioonile panna kirjeldav nimi, nt: _add_status_to_ideas_table_
 **10. episood** - Controllers | `php artisan make:controller` - ideede jaoks sobis Resource tüüp, sai valida vastava Modeli (Idea) | kulutasin liiga palju aega kassipildi generaatori peale
 
 **11. episood** - Kasutaja sisendi valideerimine error komponendiga
+
+**12. episood** - Form Request genereerimine | Form Request kasutamine Controlleris
