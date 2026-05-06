@@ -1,3 +1,5 @@
+## FUNDAMENTALS
+
 **1. episood** - Jeffrey tutvustus
 
 **2. episood** - PHP, Composer ja Laravel install | laraveliga projekti loomine | kuna ma ei tõmmanud Herd'i, kasutan `php artisan serve` | Welcome view'ga tutvumine
@@ -24,3 +26,5 @@ Migratsioonile panna kirjeldav nimi, nt: _add_status_to_ideas_table_
 **11. episood** - Kasutaja sisendi valideerimine error komponendiga
 
 **12. episood** - Form Request genereerimine | Form Request kasutamine Controlleris
+
+**13. episood** - DaisyUI

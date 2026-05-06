@@ -23,7 +23,7 @@ class IdeaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'description' => ['required', 'min:15'],
+            'description' => ['required', 'min:10'],
         ];
     }
 
@@ -31,7 +31,7 @@ class IdeaRequest extends FormRequest
     {
         return [
             'description.required' => 'I NEED A :ATTRIBUTE!!!!!',
-            'description.min' => 'THAT IS NOT ENOUGH, GIVE ME AT LEAST 15 CHARACTERS FOR THE :ATTRIBUTE!!!!!!!!',
+            'description.min' => 'THAT IS NOT ENOUGH, GIVE ME AT LEAST :min CHARACTERS FOR THE :ATTRIBUTE!!!!!!!!',
         ];
     }
 }
