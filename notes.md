@@ -28,3 +28,7 @@ Migratsioonile panna kirjeldav nimi, nt: _add_status_to_ideas_table_
 **12. episood** - Form Request genereerimine | Form Request kasutamine Controlleris
 
 **13. episood** - DaisyUI
+
+## AUTHENTICATION AND AUTHORIZATION
+
+**14. episood** - 

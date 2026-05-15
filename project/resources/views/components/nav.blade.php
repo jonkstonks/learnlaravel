@@ -8,7 +8,7 @@
                 </svg>
             </div>
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                <li><a href="/ideas/">your ideas</a></li>
+                <li><a href="/ideas/">ideas</a></li>
                 <li><a href="/ideas/create">new idea</a></li>
                 <li><a href="/cats">cats</a></li>
             </ul>
@@ -17,7 +17,7 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 gap-2">
-            <li><a href="/ideas/">your ideas</a></li>
+            <li><a href="/ideas/">ideas</a></li>
             <li><a href="/ideas/create">new idea</a></li>
             <li><a href="/cats">cats</a></li>
         </ul>
