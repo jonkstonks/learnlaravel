@@ -3,7 +3,7 @@
 ])
 
 <!DOCTYPE html>
-<html lang="en" data-theme="silk">
+<html lang="en" data-theme="dracula">
 
 <head>
     <meta charset="UTF-8">

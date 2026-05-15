@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100 shadow-sm">
+<div class="navbar bg-base-300">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -9,7 +9,6 @@
             </div>
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                 <li><a href="/ideas/">ideas</a></li>
-                <li><a href="/ideas/create">new idea</a></li>
                 <li><a href="/cats">cats</a></li>
             </ul>
         </div>
@@ -18,11 +17,23 @@
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 gap-2">
             <li><a href="/ideas/">ideas</a></li>
-            <li><a href="/ideas/create">new idea</a></li>
             <li><a href="/cats">cats</a></li>
         </ul>
     </div>
     <div class="navbar-end">
-        <a class="btn">log in</a>
+        @guest
+        <ul class="menu menu-horizontal space-x-2">
+            <li><a class="btn btn-soft btn-primary" href="/login">log in</a></li>
+            <li><a class="btn btn-soft btn-secondary" href="/register">register</a></li>
+        </ul>
+        @endguest
+
+        @auth
+        <form method="POST" action="/logout">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-soft btn-ghost">log out</button>
+        </form>
+        @endauth
     </div>
 </div>
