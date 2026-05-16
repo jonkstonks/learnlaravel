@@ -10,6 +10,9 @@
             <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                 <li><a href="/ideas/">ideas</a></li>
                 <li><a href="/cats">cats</a></li>
+                @can('view-admin')
+                    <li><a href="/admin">admin</a></li>
+                @endcan
             </ul>
         </div>
         <a class="btn btn-ghost text-xl" href="/cats">cats & ideas</a>
@@ -18,6 +21,9 @@
         <ul class="menu menu-horizontal px-1 gap-2">
             <li><a href="/ideas/">ideas</a></li>
             <li><a href="/cats">cats</a></li>
+            @can('view-admin')
+                <li><a href="/admin">admin</a></li>
+            @endcan
         </ul>
     </div>
     <div class="navbar-end">

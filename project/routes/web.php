@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Idea;
 use App\Models\Cat;
 use App\Common\Helpers;
+use App\Providers\AppServiceProvider;
 
 Route::get('/', function () {
     return 'Placeholder for home.';
@@ -35,4 +36,13 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [RegisteredUserController::class, 'store']);
     Route::get('/login', [SessionsController::class, 'create'])->name('login');
     Route::post('/login', [SessionsController::class, 'store']);
+});
+
+// Admin example
+Route::get('/admin', function () {
+    if (! Gate::allows('view-admin')) {
+        abort(404);
+    };
+
+    return 'Very cool admin hangout';
 });

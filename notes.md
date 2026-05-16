@@ -35,4 +35,6 @@ Migratsioonile panna kirjeldav nimi, nt: _add_status_to_ideas_table_
 
 **15. episood** - Middleware (auth & guest)
 
-**16. episood** - Model relationships | BelongsTo, HasMany 
+**16. episood** - Model relationships | BelongsTo, HasMany
+
+**17. episood** - Authorization using gates | lehtedel, mille olemasolu ei soovi õiguste puudumisel avaldada: 403 asemel näidata 404
