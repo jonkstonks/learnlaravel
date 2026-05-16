@@ -38,3 +38,5 @@ Migratsioonile panna kirjeldav nimi, nt: _add_status_to_ideas_table_
 **16. episood** - Model relationships | BelongsTo, HasMany
 
 **17. episood** - Authorization using gates | lehtedel, mille olemasolu ei soovi õiguste puudumisel avaldada: 403 asemel näidata 404
+
+**18. episood** - Policy loomine | IdeaPolicy'sse funktsioonid, mis määravad kellel on õigused Idea mudelit muuta, näha, kustutada jne. Praegu jäi ainult update
