@@ -34,3 +34,5 @@ Migratsioonile panna kirjeldav nimi, nt: _add_status_to_ideas_table_
 **14. episood** - Kasutaja registreerimine ja sisselogimine
 
 **15. episood** - Middleware (auth & guest)
+
+**16. episood** - Model relationships | BelongsTo, HasMany 
