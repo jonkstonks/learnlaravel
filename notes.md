@@ -32,3 +32,5 @@ Migratsioonile panna kirjeldav nimi, nt: _add_status_to_ideas_table_
 ## AUTHENTICATION AND AUTHORIZATION
 
 **14. episood** - Kasutaja registreerimine ja sisselogimine
+
+**15. episood** - Middleware (auth & guest)

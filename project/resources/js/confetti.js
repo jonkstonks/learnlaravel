@@ -12,15 +12,15 @@ function burst(originEl) {
     const ctx = canvas.getContext('2d');
     const rect = originEl.getBoundingClientRect();
     const ox = rect.left + rect.width / 2;
-    const oy = rect.top + rect.height / 1.5;
+    const oy = rect.top + rect.height / 1.75;
     const colors = ['#f94144', '#f3722c', '#90be6d', '#43aa8b', '#577590', '#f9c74f'];
 
     const particles = Array.from({ length: 80 }, () => ({
         x: ox, y: oy,
-        vx: (Math.random() - 0.5) * 24,
+        vx: (Math.random() - 0.5) * 20,
         vy: Math.random() * -14 - 3,
         color: colors[Math.floor(Math.random() * colors.length)],
-        size: Math.random() * 8 + 5,
+        size: Math.random() * 8 + 3,
         rotation: Math.random() * Math.PI * 2,
         spin: (Math.random() - 0.5) * 0.3,
         life: 1,
@@ -56,12 +56,13 @@ function burst(originEl) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    const img = document.getElementById('cat-img');
+    if (img) burst(img);
+
     const btn = document.getElementById('summon-btn');
     if (!btn) return;
     btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const img = document.getElementById('cat-img');
-        burst(img || btn);
-        setTimeout(() => { window.location.href = btn.href; }, 600);
+        setTimeout(() => { window.location.href = btn.href; }, 200);
     });
 });
